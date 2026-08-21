@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ting JIA</title>
+<style>
+  :root {
+    --bg: #0d0d13; --text: #f2f2f7; --muted: #9d9dad; --faint: #2e2e3d;
+    --accent: #ef9a5b; --accent2: #d9a44e; --accent3: #e07a5f;
+    --glow1: rgba(239, 154, 91, .12); --glow2: rgba(217, 164, 78, .09);
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+            "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    --serif: "C059", "D050000L", "DejaVu Serif", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #faf9fb; --text: #17171d; --muted: #6b6b78; --faint: #e8e7ee;
+      --glow1: rgba(239, 154, 91, .15); --glow2: rgba(217, 164, 78, .13); }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif);
+    background:
+      radial-gradient(120% 55% at 50% -12%, var(--glow1), transparent 62%),
+      radial-gradient(90% 45% at 85% 112%, var(--glow2), transparent 60%),
+      var(--bg);
+    background-attachment: fixed;
+    color: var(--text); font-size: 16px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; min-height: 100vh;
+  }
+
+  header { text-align: center; padding: 88px 24px 8px; }
+  .name { font-weight: 700; font-size: 1.45rem; letter-spacing: .06em; color: var(--text); }
+  .contact { margin-top: 18px; display: flex; gap: 22px; justify-content: center; }
+  .contact a { color: var(--muted); text-decoration: none; font-size: .88rem;
+    border-bottom: 1px solid var(--faint); padding-bottom: 1px; transition: all .18s; }
+  .contact a:hover { color: var(--accent); border-color: var(--accent); }
+
+  main { max-width: 660px; margin: 0 auto; padding: 8px 24px 48px; }
+  section { padding: 42px 0; border-top: 1px solid var(--faint); }
+  .label { font-weight: 700;
+    font-size: 1.08rem; letter-spacing: .04em; color: var(--text); margin-bottom: 20px; }
+  .label em { font-style: normal; }
+  .label em.a1 { color: var(--accent); }
+  .label em.a2 { color: var(--accent2); }
+  .label em.a3 { color: var(--accent3); }
+
+  .about p { font-size: 1rem; color: var(--text); }
+  .about p + p { margin-top: 12px; }
+  .about strong { font-weight: 700; }
+  .about .field { margin-top: 16px; }
+
+  .field { display: flex; gap: 22px; padding: 13px 0; border-top: 1px solid var(--faint); align-items: flex-start; }
+  .field:first-of-type { border-top: 0; }
+  .field .k { font-family: var(--sans); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); min-width: 132px; flex-shrink: 0; padding-top: 3px; }
+  .field .v { font-size: 1rem; color: var(--text); line-height: 1.7; }
+  .nw { white-space: nowrap; }
+
+  .list { list-style: none; }
+  .list li { padding: 12px 0; border-top: 1px solid var(--faint); font-size: 1rem; color: var(--text); }
+  .list li:first-child { border-top: 0; }
+  .list li small { display: block; color: var(--muted); font-size: .74rem; margin-top: 2px; }
+
+  footer { text-align: center; padding: 44px 24px 68px; }
+  .closing { font-size: 1.05rem;
+    color: var(--text); letter-spacing: .02em; margin-bottom: 18px; }
+  .closing .accent { color: var(--accent); }
+  footer p { font-size: .74rem; color: var(--muted); letter-spacing: .06em; }
+
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 480px) {
+    .field { flex-direction: column; gap: 4px; }
+    .field .k { min-width: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="name">Ting JIA</p>
+  <div class="contact">
+    <a href="mailto:455012719@qq.com">Email</a>
+    <a href="https://github.com/dotdudu">GitHub</a>
+  </div>
+</header>
+
+<main>
+  <section class="about reveal">
+    <p class="label"><em class="a1">01</em> — Background</p>
+    <p>B.A. in Management, Zhejiang University of Technology (Class of 2022). Undergraduate thesis on <strong>top management team heterogeneity and corporate digital transformation</strong>.</p>
+    <p>Now working in the economic sector.</p>
+    <div class="field"><span class="k">Main focus</span><span class="v"><span class="nw">Public finance</span>, <span class="nw">Rural development</span>, <span class="nw">Probability &amp; statistics</span></span></div>
+  </section>
+
+  <section class="reveal">
+    <p class="label"><em class="a2">02</em> — Favorites</p>
+    <div class="field"><span class="k">Fitness</span><span class="v">7,439 mins of training in 2026</span></div>
+    <div class="field"><span class="k">Team</span><span class="v">Real Madrid</span></div>
+    <div class="field"><span class="k">Playing</span><span class="v"><span class="nw">Servant of the Lake</span>, <span class="nw">Zelda: Breath of the Wild</span>, <span class="nw">Honor of Kings</span></span></div>
+    <div class="field"><span class="k">Watching</span><span class="v"><span class="nw">Person of Interest</span>, <span class="nw">The Bourne series</span></span></div>
+    <div class="field"><span class="k">Places</span><span class="v"><span class="nw">Guangzhou</span>, <span class="nw">Sydney</span>, <span class="nw">Whitsunday Islands</span>, <span class="nw">Schwerin</span></span></div>
+  </section>
+
+  <section class="reveal">
+    <p class="label"><em class="a3">03</em> — Reading · 2026</p>
+    <ul class="list">
+      <li>A Year of No Significance in the Ming Dynasty<small>Wanli Shiwu Nian</small></li>
+      <li>Change and Certainty<small>Bianju yu Dingli</small></li>
+      <li>The Three-Body Problem</li>
+      <li>The Road to Trading<small>Jiaoyi zhi Lu</small></li>
+      <li>Principles: Navigating the Changing World Order</li>
+      <li>The Courage to Be Disliked</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p class="closing">The <span class="accent">Internationale</span> shall be realized.</p>
+  <p>Last updated · 2026-08-21</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && e.target.classList.add("in")), { threshold: .08 });
+  document.querySelectorAll(".reveal").forEach((s) => io.observe(s));
+</script>
+</body>
+</html>
